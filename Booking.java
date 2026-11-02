@@ -4,3 +4,7 @@ public class Booking {
         return minutesPassed > RESERVATION_MINUTES;
     }
 }
+
+class DepositHold {
+    void hold(String paymentToken, int amount) { }
+}
