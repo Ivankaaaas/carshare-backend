@@ -8,8 +8,9 @@ public class Lock {
     }
 
     public boolean unlock(String carId, String token) {
-        return validate(token);
+        return validate(token) && !isExpired(token);
     }
 
     boolean validate(String token) { return token != null; }
+    boolean isExpired(String token) { return false; }
 }
