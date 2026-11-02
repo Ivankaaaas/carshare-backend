@@ -8,9 +8,11 @@ public class Lock {
     }
 
     public boolean unlock(String carId, String token) {
+        if (isExpired(token)) return false;
         return validate(token) || bleUnlock(carId);
     }
 
     boolean validate(String token) { return token != null; }
+    boolean isExpired(String token) { return false; }
     boolean bleUnlock(String carId) { return true; }
 }
