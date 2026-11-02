@@ -1,7 +1,7 @@
 public class Booking {
     static final int RESERVATION_MINUTES = 15;
     boolean isExpired(long minutesPassed) {
-        return minutesPassed > RESERVATION_MINUTES;
+        return minutesPassed >= RESERVATION_MINUTES;
     }
 }
 
