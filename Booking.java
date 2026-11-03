@@ -4,3 +4,8 @@ public class Booking {
         return minutesPassed > RESERVATION_MINUTES;
     }
 }
+
+// FR-3.3: deposit hold through the payment gateway adapter (PSP, no card data stored)
+class DepositHold {
+    void hold(String paymentToken, int amount) { /* call PSP sandbox */ }
+}
